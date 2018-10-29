@@ -24,11 +24,12 @@ const buildControls = (props) => {
                 addIngredient={() => props.addIngredient(ctrl.type)
                 }
                 deleteIngredient={() => props.deleteIngredient(ctrl.type)}
-
+ 
             />
+ 
         )
     }
-  
+    <button className={classes.OrderButton} disabled={!props.purchasable}>ORDER NOW</button>
     </div>
     )
 }
