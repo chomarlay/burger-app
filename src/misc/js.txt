@@ -47,3 +47,5 @@ reduce((tot,p)=> {return tot+p.shootingScore+p.pilotingScore},0);
 var totalScore3 = personnel.reduce ((tot,p) => {return p.isForceUser?tot+p.shootingScore+p.pilotingScore:tot},0);
 
 
+--- spread operator
+https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754
