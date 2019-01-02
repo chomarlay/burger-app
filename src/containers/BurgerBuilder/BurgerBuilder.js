@@ -87,24 +87,25 @@ class BurgerBuilder extends Component{
     }
     purchaseContinueHandler = () => {
         // alert ('Continue order');
-        this.setState ({loading:true});
-        const order = {
-            ingredients : this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-                name: 'Kermit',
-                address: '123 Street, Sydney',
-                postcode: 2000
-            },
-            email: 'abc@abc.com',
-            deliverMethod: 'uberEat'
-        }
-        axios.post('/orders.json', order)// add .json for firebase
-        .then (response=>
-            this.setState({loading:false, purchasing:false}))
-        .catch(error=>
-            this.setState({loading:false, purchasing:false}))
-            ;  
+        // this.setState ({loading:true});
+        // const order = {
+        //     ingredients : this.state.ingredients,
+        //     price: this.state.totalPrice,
+        //     customer: {
+        //         name: 'Kermit',
+        //         address: '123 Street, Sydney',
+        //         postcode: 2000
+        //     },
+        //     email: 'abc@abc.com',
+        //     deliverMethod: 'uberEat'
+        // }
+        // axios.post('/orders.json', order)// add .json for firebase
+        // .then (response=>
+        //     this.setState({loading:false, purchasing:false}))
+        // .catch(error=>
+        //     this.setState({loading:false, purchasing:false}))
+        //     ;  
+        this.props.history.push('/checkout');
     }
     
     render () {
